@@ -1,0 +1,8 @@
+<div class="spm-search">
+  <input type="text" class="spm-search__input"
+         placeholder="Search"
+         ng-model="$ctrl.searchString"
+         spm-auto-complete
+         spm-input-key-up on-key-up-action="$ctrl.search({value: value})" key="Enter">
+  <i class="fa fa-search spm-search__button"></i>
+</div>

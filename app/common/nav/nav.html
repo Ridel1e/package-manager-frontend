@@ -1,6 +1,14 @@
-<nav class="spm-nav">
-	<a data-ng-repeat="route in vm.routes"
-	   ui-sref="{{ ::route.state }}">
+<section class="spm-nav">
+	<header class="spm-nav__header">
+
+	</header>
+	<nav class="spm-nav__list">
+		<a data-ng-repeat="route in $ctrl.routes"
+			 data-ng-class="{'spm-nav__link_active': $ctrl.isCurrentState(route.state)}"
+			 class="spm-nav__link"
+			 ui-sref="{{ ::route.state }}">
+			<i class="{{ route.glyphIcon }}"></i>&nbsp;
 			{{ ::route.name }}
-	</a>
-</nav>
+		</a>
+	</nav>
+</section>

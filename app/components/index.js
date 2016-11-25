@@ -5,15 +5,14 @@
 import angular from 'angular';
 
 /* modules */
-import MainModule from './main';
-import SupportModule from './support';
-import DocumentationModule from './documentation';
+
+import SearchModule from './search';
+import PackagesListModule from './packages-list';
 
 const module = angular
   .module('app.components', [
-    MainModule,
-    SupportModule,
-    DocumentationModule
+    SearchModule,
+    PackagesListModule
   ]);
 
 export default module.name;

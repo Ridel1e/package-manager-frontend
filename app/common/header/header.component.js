@@ -2,11 +2,14 @@
  * Created by ridel1e on 13/11/2016.
  */
 
+import './header.less';
+
 import template from './header.html';
-import './styles/importer.less';
+import controller from './header.controller';
 
 const component = {
-  template
+  template,
+  controller
 };
 
 export default component;

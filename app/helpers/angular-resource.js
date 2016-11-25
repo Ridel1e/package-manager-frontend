@@ -5,8 +5,9 @@
 import AngularObject from './angular-object';
 
 class AngularResource extends AngularObject {
-  _initialize() {
-
+  constructor(...args) {
+    super.apply(this, ...args);
+    this._repository = this.Restangular.all();
   }
 }
 

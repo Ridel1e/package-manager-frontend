@@ -17,7 +17,7 @@ module.exports = (__dirname, fileName) => {
 
     resolve: {
       modulesDirectories: ['node_modules', 'app'],
-      extensions: ['', '.js']
+      extensions: ['', '.js', '.less']
     },
 
     resolveLoader: {

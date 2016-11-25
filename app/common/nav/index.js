@@ -3,12 +3,15 @@
  */
 
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
 /* components */
 import NavComponent from './nav.component';
 
 const module = angular
-  .module('app.common.nav', []);
+  .module('app.common.nav', [
+    uiRouter
+  ]);
 
 module
   .component('spmNav', NavComponent);

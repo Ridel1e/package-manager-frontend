@@ -5,9 +5,29 @@
 import AngularObject from 'helpers/angular-object';
 
 class NavController extends AngularObject {
-  constructor() {
+  constructor($state) {
     'ngInject';
-    super();
+    super($state);
+  }
+
+  $onInit () {
+    this.routes = [{
+      name: 'MAIN',
+      state: 'main',
+      glyphIcon: 'fa fa-home',
+    }, {
+      name: 'SUPPORT',
+      state: 'support',
+      glyphIcon: 'fa fa-question'
+    }, {
+      name: 'DOCUMENTATION',
+      state: 'documentation',
+      glyphIcon: 'fa fa-file-text-o'
+    }]
+  }
+
+  isCurrentState(state) {
+    return this.$state.is(state);
   }
 }
 

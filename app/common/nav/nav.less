@@ -1,0 +1,37 @@
+@import "../../styles/common-blocks";
+@import "../../styles/colors";
+
+.spm-nav {
+  .card;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  &__header {
+    background: @light-primary-color;
+    color: @icons;
+    font-size: 3em;
+    height: 150px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    align-items: center;
+    color: @primary-text;
+    display: flex;
+    height: 30px;
+    font-size: 1em;
+    padding: 5px 15px;
+    text-decoration: none;
+
+    &:hover, &_active {
+      background: @light-primary-color;
+      color: @icons;
+    }
+  }
+}

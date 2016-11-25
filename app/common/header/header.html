@@ -1,5 +1,7 @@
-<header class="spm-header">
-<spm-header-search></spm-header-search>
-<br>
-<spm-header-user-menu></spm-header-user-menu>
-</header>
+<div class="spm-header">
+  <i class="fa fa-bars spm-header__menu-btn"></i>
+  <div class="spm-header__search">
+    <spm-search on-search-activate="$ctrl.search(value)"></spm-search>
+  </div>
+<!--<spm-user-menu></spm-user-menu>-->
+</div>

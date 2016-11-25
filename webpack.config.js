@@ -22,12 +22,7 @@ const configs = {
 const getFileName = function (environment) {
   const appName = 'app';
 
-  if(environment === 'development') {
-    return `${appName}.js`
-  }
-  else {
-    return `${appName}.min.js`
-  }
+  return `${appName}.js`;
 };
 
 /**

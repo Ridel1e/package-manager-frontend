@@ -1,0 +1,9 @@
+<ul class="packages-list">
+  <h2 class="packages-list__header">
+    {{::$ctrl.packages.length }} results for
+    <span class="packages-list__search-parameter">'{{ ::$ctrl.query }}'</span>
+  </h2>
+  <li data-ng-repeat="package in $ctrl.packages">
+    <spm-package-item package="package" />
+  </li>
+</ul>

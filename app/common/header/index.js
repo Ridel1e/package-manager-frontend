@@ -3,18 +3,14 @@
  */
 
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
 /* components */
 import HeaderComponent from './header.component';
 
-/* modules */
-import HeaderSearchModule from './header-search';
-import HeaderUserMenuModule from './header-user-menu';
-
 const module = angular
   .module('app.common.header', [
-    HeaderSearchModule,
-    HeaderUserMenuModule
+    uiRouter
   ]);
 
 module

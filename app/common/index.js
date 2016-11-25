@@ -7,13 +7,21 @@ import angular from 'angular';
 /* component modules */
 import HeaderModule from './header';
 import NavModule from './nav';
-import ContentComponent from './content';
+import MainPageModule from './main-page';
+import SupportPageModule from './support-page';
+import DocumentationPageModule from './documentation-page';
+import PackagesPageModule from './packages-page';
+
+/* modules */
 
 const module  = angular
   .module('app.common', [
     HeaderModule,
     NavModule,
-    ContentComponent
+    MainPageModule,
+    SupportPageModule,
+    DocumentationPageModule,
+    PackagesPageModule
   ]);
 
 export default module.name;
