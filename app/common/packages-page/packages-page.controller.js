@@ -12,8 +12,13 @@ class PackagesPageController extends AngularContainer {
 
   mapStateToThis(state) {
     return {
-      packages: state.packages
+      packages: state.packages,
+      searchString: state.searchString
     }
+  }
+
+  mapActionsToThis() {
+    return this.packageActions;
   }
 }
 

@@ -9,9 +9,10 @@ import uiRouter from 'angular-ui-router';
 import 'restangular';
 import ngAnimate from 'angular-animate';
 import ngAria from 'angular-aria';
-import ngMaterial from 'angular-material';
 import ngRedux from 'ng-redux';
 import ngReduxRouter from 'redux-ui-router';
+
+/* vendor styles */
 
 /* root component */
 import AppConfig from './app.config';
@@ -33,7 +34,6 @@ const module = angular
     ngReduxRouter,
     ngAnimate,
     ngAria,
-    ngMaterial,
     AppConfigModule,
     AppActions,
     CommonModule,

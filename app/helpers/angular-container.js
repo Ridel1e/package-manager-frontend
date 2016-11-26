@@ -12,19 +12,24 @@ class AngularContainer extends AngularObject {
    * @private
    */
   _initialize() {
-    const actionName = this.constructor.$inject[0];
-
     this.state = {};
 
+    const actions = this.mapActionsToThis();
+
     this.unsubscribe =
-      this.$ngRedux.connect(this.mapStateToThis, this[actionName])(this.state);
+      this.$ngRedux
+        .connect(this.mapStateToThis, actions)(this.state);
   }
 
   $onDestroy() {
     this.unsubscribe();
   }
 
-  mapStateToThis() {}
+  mapStateToThis() {
+    return {};
+  }
+
+  mapActionsToThis() {}
 }
 
 export default AngularContainer;

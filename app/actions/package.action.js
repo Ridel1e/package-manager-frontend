@@ -15,7 +15,7 @@ const FETCH_PACKAGES_REQUEST = 'FETCH_PACKAGES_REQUEST',
       EDIT_PACKAGES_SUCCESS = 'EDIT_PACKAGES_SUCCESS',
       EDIT_PACKAGES_ERROR = 'EDIT_PACKAGES_ERROR';
 
-const packagesActions = (packageResource) => {
+const packageActions = (packageResource) => {
   'ngInject';
   
   return {
@@ -57,7 +57,7 @@ const packagesActions = (packageResource) => {
   }
 };
 
-export default packagesActions;
+export default packageActions;
 
 export {
   FETCH_PACKAGES_REQUEST,
