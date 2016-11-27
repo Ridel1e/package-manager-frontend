@@ -5,15 +5,9 @@
 const FETCH_PACKAGES_REQUEST = 'FETCH_PACKAGES_REQUEST',
       FETCH_PACKAGES_SUCCESS = 'FETCH_PACKAGES_SUCCESS',
       FETCH_PACKAGES_ERROR = 'FETCH_PACKAGES_ERROR',
-      SAVE_PACKAGES_REQUEST = 'SAVE_PACKAGES_REQUEST',
-      SAVE_PACKAGES_SUCCESS = 'SAVE_PACKAGES_SUCCESS',
-      SAVE_PACKAGES_ERROR = 'SAVE_PACKAGES_ERROR',
-      REMOVE_PACKAGES_REQUEST = 'REMOVE_PACKAGES_REQUEST',
-      REMOVE_PACKAGES_SUCCESS = 'REMOVE_PACKAGES_SUCCESS',
-      REMOVE_PACKAGES_ERROR = 'REMOVE_PACKAGES_ERROR',
-      EDIT_PACKAGES_REQUEST = 'EDIT_PACKAGES_REQUEST',
-      EDIT_PACKAGES_SUCCESS = 'EDIT_PACKAGES_SUCCESS',
-      EDIT_PACKAGES_ERROR = 'EDIT_PACKAGES_ERROR';
+      FETCH_PACKAGE_REQUEST = 'FETCH_PACKAGE_REQUEST',
+      FETCH_PACKAGE_ERROR = 'FETCH_PACKAGE_ERROR',
+      FETCH_PACKAGE_SUCCESS = 'FETCH_PACKAGE_SUCCESS';
 
 const packageActions = (packageResource) => {
   'ngInject';
@@ -34,6 +28,12 @@ const packageActions = (packageResource) => {
           dispatch(_fetchPackagesError(error)));
     }
   }
+
+  function fetchPackage(name) {
+    return (dispatch) => {
+      dispatch(_fe)
+    }
+  } 
   
   function _fetchPackagesRequest() {
     return {
@@ -55,6 +55,21 @@ const packageActions = (packageResource) => {
       payload: error
     }
   }
+
+  function _fetchPackageRequest() {
+    return {
+      type: FETCH_PACKAGE_REQUEST,
+      payload: {},
+    }
+  }
+
+  function _fetchPackageSuccess(pkg) {
+
+  }
+
+  function _fetchPackageError(error) {
+
+  }
 };
 
 export default packageActions;
@@ -63,13 +78,7 @@ export {
   FETCH_PACKAGES_REQUEST,
   FETCH_PACKAGES_SUCCESS,
   FETCH_PACKAGES_ERROR,
-  SAVE_PACKAGES_REQUEST,
-  SAVE_PACKAGES_SUCCESS,
-  SAVE_PACKAGES_ERROR,
-  REMOVE_PACKAGES_REQUEST,
-  REMOVE_PACKAGES_SUCCESS,
-  REMOVE_PACKAGES_ERROR,
-  EDIT_PACKAGES_REQUEST,
-  EDIT_PACKAGES_SUCCESS,
-  EDIT_PACKAGES_ERROR
+  FETCH_PACKAGE_REQUEST,
+  FETCH_PACKAGE_SUCCESS,
+  FETCH_PACKAGE_ERROR
 }

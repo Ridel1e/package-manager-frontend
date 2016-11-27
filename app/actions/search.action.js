@@ -8,17 +8,10 @@ const searchActions = ($state) => {
   'ngInject';
 
   return {
-    search
+    setSearchString
   };
 
-  function search(queryString) {
-    return (dispatch) => {
-      dispatch(_setSearch(queryString));
-      $state.go('packages', { query: queryString })
-    }
-  }
-
-  function _setSearch(queryString) {
+  function setSearchString(queryString) {
     return {
       type: SET_SEARCH,
       payload: queryString

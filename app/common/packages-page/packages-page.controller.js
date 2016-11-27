@@ -5,9 +5,9 @@
 import AngularContainer from 'helpers/angular-container';
 
 class PackagesPageController extends AngularContainer {
-  constructor(packageActions, $ngRedux) {
+  constructor(packageActions, $ngRedux, $state) {
     'ngInject';
-    super(packageActions, $ngRedux);
+    super(packageActions, $ngRedux, $state);
   }
 
   mapStateToThis(state) {

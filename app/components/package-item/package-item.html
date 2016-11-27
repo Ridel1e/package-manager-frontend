@@ -1,0 +1,28 @@
+<article class="packages-item">
+  <div class="packages-item__attr-group">
+    <span class="packages-item__name" ui-sref="package({name: $ctrl.package.name})">
+      {{::$ctrl.package.name}}
+    </span>
+    <span class="packages-item__version">
+      {{::$ctrl.package.version}}
+    </span>
+  </div>
+  <div class="packages-item__attr-group">
+    <span class="packages-item__author">
+      {{::$ctrl.package.author}}
+    </span>
+    <span class="packages-item__stars">
+      <i class="fa fa-star"></i> {{::$ctrl.package.stars}}
+    </span>
+  </div>
+  <span>
+    {{::$ctrl.package.description}}
+  </span>
+  <div class="packages-item__tags">
+    <i class="fa fa-tags"></i>
+    <span class="packages-item__tag-link"
+          data-ng-repeat="tag in $ctrl.package.tags">
+      {{ ::tag  }}&nbsp;
+    </span>
+  </div>
+</article>

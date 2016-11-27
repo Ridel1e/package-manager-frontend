@@ -7,12 +7,14 @@ import angular from 'angular';
 /* modules */
 
 import SearchModule from './search';
-import PackagesListModule from './packages-list';
+import PackagesItemModule from './package-item';
+import ListViewModule from './list-view';
 
 const module = angular
   .module('app.components', [
     SearchModule,
-    PackagesListModule
+    PackagesItemModule,
+    ListViewModule
   ]);
 
 export default module.name;

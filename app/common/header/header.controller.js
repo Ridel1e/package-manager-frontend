@@ -2,16 +2,18 @@
  * Created by ruslansalahov on 23/11/2016.
  */
 
-import AngularContainer from 'helpers/angular-container';
+import AngularObject from 'helpers/angular-object';
 
-class HeaderController extends AngularContainer {
-  constructor(searchActions, $ngRedux) {
+class HeaderController extends AngularObject {
+  constructor($state, $ngRedux) {
     'ngInject';
-    super(searchActions, $ngRedux);
+    super($state, $ngRedux);
   }
   
-  mapActionsToThis() {
-    return this.searchActions;
+  search(value) {
+    if(this._isEmpty(value)) { return; }
+
+    this.$state.go('packages', { query: value });
   }
 
   _isEmpty(value) {

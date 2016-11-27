@@ -21,12 +21,14 @@ module
         url: '/packages?query',
         component: 'spmPackagesPage',
         resolve: {
-          packages (packageActions, $ngRedux, $stateParams) {
+          packages (packageActions, searchActions, $ngRedux, $stateParams) {
             'ngInject';
 
             const actions = {};
-            $ngRedux.connect(null, packageActions)(actions);
+            $ngRedux.connect(null, 
+              Object.assign({}, packageActions, searchActions))(actions);
 
+            actions.setSearchString($stateParams.query);
             return actions.fetchPackages($stateParams.query);
           }
         }

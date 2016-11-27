@@ -2,13 +2,11 @@
  * Created by ridel1e on 13/11/2016.
  */
 
+import template from './app.html';
 import 'styles/app.less';
 
-import template from './app.html';
-
-
 const component = {
-  template,
+  template
 };
 
 

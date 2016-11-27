@@ -3,33 +3,15 @@
 
 /* common */
 .spm-header {
+  /* geometry */
+    height: 70px;
+    margin-left: 250px;
+    position: relative;
+  /* end */
+
   .card;
-
   align-items: center;
+  justify-content: center;
   display: flex;
-  height: 70px;
-
-  &__search {
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  &__menu-btn {
-    color: @accent-color;
-  }
-}
-
-/* small screen */
-@media screen and (max-width: 960px) {
-  .spm-header__menu-btn {
-    margin-left: 1em;
-  }
-}
-
-
-/* large screen */
-@media screen and (min-width: 960px) {
-  .spm-header__menu-btn {
-    display: none;
-  }
+  
 }

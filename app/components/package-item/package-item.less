@@ -1,0 +1,47 @@
+@import "../../styles/fonts";
+@import "../../styles/colors";
+
+.packages-item {
+  /* geometry */
+  margin-bottom: 25px;
+  padding: 15px;
+  // min-width: 300px;
+  /* end */
+
+  display: flex;
+  flex-direction: column;
+  
+  &__name {
+    .bold;
+    cursor: default;
+    font-size: 2em;
+
+    &:hover {
+      color: @link-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__attr-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &__version, &__author, &__stars, &__tag-link {
+    .medium;
+    color: @secondary-text;
+    cursor: default;
+
+    &:hover {
+      color: @link-color;
+    }
+  }
+
+  &__tags {
+    color: @secondary-text;
+    margin-top: 10px;
+  }
+
+}

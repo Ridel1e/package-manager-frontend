@@ -11,6 +11,7 @@ import MainPageModule from './main-page';
 import SupportPageModule from './support-page';
 import DocumentationPageModule from './documentation-page';
 import PackagesPageModule from './packages-page';
+import PackagePageModule from './package-page';
 
 /* modules */
 
@@ -21,7 +22,8 @@ const module  = angular
     MainPageModule,
     SupportPageModule,
     DocumentationPageModule,
-    PackagesPageModule
+    PackagesPageModule,
+    PackagePageModule
   ]);
 
 export default module.name;

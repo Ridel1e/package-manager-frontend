@@ -1,10 +1,13 @@
 <div class="spm-packages-page">
-  <section class="spm-packages-page__list">
-    <spm-packages-list packages="$ctrl.state.packages"
-                       query="$ctrl.state.searchString"
-                       style="width: 100%" />
-  </section>
-  <!--<section class="spm-packages-page__filter">-->
-
-  <!--</section>-->
+  <spm-list-view class="width-component-fix">
+    <h2>
+      {{ $ctrl.state.packages.length }} results for 
+      <span class="spm-packages-page__query-text">'{{ $ctrl.state.searchString }}<span>'
+    </h2>
+    <ul class="spm-packages-page__list">
+      <li data-ng-repeat="package in $ctrl.state.packages">
+        <spm-package-item package="package"></spm-package-item>
+      </li>
+    </ul>
+  </spm-list-view>
 </div>
