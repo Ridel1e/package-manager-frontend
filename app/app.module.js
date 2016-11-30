@@ -24,7 +24,7 @@ import AppConfigModule from './config';
 import AppActions from './actions';
 import CommonModule from './common';
 import ComponentsModule from './components';
-import ResourcesModule from './resources';
+import ServicesModule from './services';
 
 const module = angular
   .module('app', [
@@ -38,7 +38,7 @@ const module = angular
     AppActions,
     CommonModule,
     ComponentsModule,
-    ResourcesModule
+    ServicesModule
   ]);
 
 module

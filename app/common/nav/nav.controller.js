@@ -8,9 +8,7 @@ class NavController extends AngularObject {
   constructor($state) {
     'ngInject';
     super($state);
-  }
 
-  $onInit () {
     this.routes = [{
       name: 'MAIN',
       state: 'main',

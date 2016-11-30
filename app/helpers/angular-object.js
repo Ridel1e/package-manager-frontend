@@ -3,25 +3,6 @@
  */
 
 class AngularObject {
-
-  /**
-   * @public
-   * @static
-   * @returns {Array<string>}
-   */
-  static get $inject() {
-    return this.$injectDirect || [];
-  }
-
-  /**
-   * @public
-   * @static
-   * @param {Array<string>} injections
-   */
-  static set $inject(injections) {
-    this.$injectDirect = (this.$injectDirect || []).concat(injections);
-  }
-
   constructor() {
     const $inject = this.constructor.$inject;
     

@@ -12,6 +12,7 @@ import SupportPageModule from './support-page';
 import DocumentationPageModule from './documentation-page';
 import PackagesPageModule from './packages-page';
 import PackagePageModule from './package-page';
+import LoginPageModule from './login-page';
 
 /* modules */
 
@@ -23,7 +24,8 @@ const module  = angular
     SupportPageModule,
     DocumentationPageModule,
     PackagesPageModule,
-    PackagePageModule
+    PackagePageModule,
+    LoginPageModule
   ]);
 
 export default module.name;

@@ -13,8 +13,18 @@ module
   .config(($stateProvider) => {
     $stateProvider
       .state('package', {
-        url: '/package/:name',
+        url: '/package/:id',
         component: 'spmPackagePage',
+        resolve: {
+          package(packageActions, $ngRedux, $stateParams) {
+            'ngInject';
+
+            const actions = {};
+            $ngRedux.connect(null, packageActions)(actions);
+            
+            return actions.fetchPackage($stateParams.id)
+          }
+        }
       })
   });
 

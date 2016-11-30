@@ -1,0 +1,15 @@
+<section class="spm-package-description">
+  <h2 class="spm-package-description__main-head">
+    {{::$ctrl.package.name}} 
+    <span class="spm-package-description__version">
+      {{::$ctrl.package.version}}
+    <span>
+  </h2>
+  <h3 class="spm-package-description__info">
+    <span><i class="fa fa-user"></i> {{::$ctrl.package.author}}</span>
+    <span><i class="fa fa-star"></i> {{::$ctrl.package.stars}}</span>
+  </h3>
+  <p class="spm-package-description__content"> 
+    {{::$ctrl.package.description}}
+  </p>
+</section>

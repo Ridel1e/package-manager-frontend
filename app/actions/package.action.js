@@ -13,7 +13,8 @@ const packageActions = (packageResource) => {
   'ngInject';
   
   return {
-    fetchPackages
+    fetchPackages,
+    fetchPackage
   };
   
   function fetchPackages(queryString) {
@@ -29,9 +30,16 @@ const packageActions = (packageResource) => {
     }
   }
 
-  function fetchPackage(name) {
+  function fetchPackage(id) {
     return (dispatch) => {
-      dispatch(_fe)
+      dispatch(_fetchPackageRequest());
+
+      return packageResource
+        .one(id)
+        .then((pack) =>
+          dispatch(_fetchPackageSuccess(pack)))
+        .catch((error) => 
+          dispatch(_fetchPackageError(error)));
     }
   } 
   
@@ -64,11 +72,17 @@ const packageActions = (packageResource) => {
   }
 
   function _fetchPackageSuccess(pkg) {
-
+    return {
+      type: FETCH_PACKAGE_SUCCESS,
+      payload: pkg
+    }
   }
 
   function _fetchPackageError(error) {
-
+    return {
+      type: FETCH_PACKAGE_ERROR,
+      payload: error
+    }
   }
 };
 

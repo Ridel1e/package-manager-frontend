@@ -1,10 +1,16 @@
 
-import AngularObject from 'helpers/angular-object';
+import AngularContainer from 'helpers/angular-container';
 
-class PackagePageController extends AngularObject {
-  constructor ($stateParams) {
+class PackagePageController extends AngularContainer {
+  constructor ($ngRedux) {
     'ngInject';
-    super($stateParams);
+    super($ngRedux);
+  }
+
+  mapStateToThis(state) {
+    return {
+      'package': state.package 
+    }
   }
 }
 

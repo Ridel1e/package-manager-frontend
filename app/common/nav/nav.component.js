@@ -3,7 +3,6 @@
  */
 
 import './nav.less';
-import './resources';
 
 import template from './nav.html';
 import controller from './nav.controller';

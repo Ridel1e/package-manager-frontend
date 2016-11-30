@@ -3,6 +3,7 @@
  */
 
 import AngularObject from 'helpers/angular-object';
+import * as Helpers from 'helpers/common-helpers';
 
 class HeaderController extends AngularObject {
   constructor($state, $ngRedux) {
@@ -11,13 +12,9 @@ class HeaderController extends AngularObject {
   }
   
   search(value) {
-    if(this._isEmpty(value)) { return; }
+    if(Helpers.isEmpty(value)) { return; }
 
     this.$state.go('packages', { query: value });
-  }
-
-  _isEmpty(value) {
-    return value === undefined || value === '' || value === null || value !== value;
   }
 }
 

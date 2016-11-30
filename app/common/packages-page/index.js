@@ -25,15 +25,18 @@ module
             'ngInject';
 
             const actions = {};
-            $ngRedux.connect(null, 
-              Object.assign({}, packageActions, searchActions))(actions);
+            const mapActionsToThis = 
+              Object.assign({}, packageActions, searchActions)
+
+            $ngRedux.connect(null, mapActionsToThis)(actions);
 
             actions.setSearchString($stateParams.query);
-            return actions.fetchPackages($stateParams.query);
+            return actions.fetchPackages({
+              query: $stateParams.query
+            });
           }
         }
       })
   });
 
 export default module.name;
-

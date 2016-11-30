@@ -3,7 +3,7 @@
  */
 
 export default {
-  API_URL: '',
+  API_URL: '//localhost:8000',
   LOGGING_ERROR: true,
   SEND_ERROR_TO_SERVER: false,
 }

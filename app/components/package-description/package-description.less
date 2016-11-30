@@ -1,0 +1,42 @@
+@import "../../styles/common-blocks";
+@import "../../styles/colors";
+@import "../../styles/fonts";
+
+.spm-package-description {
+  align-items: center;
+  .card;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px;
+
+  /* geometry */
+  max-height: 80%;
+  /* end */
+
+  &__main-head, &__info {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  &__main-head {
+    color: @primary-text;
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+
+  &__info {
+    color: @secondary-text;
+    .medium;
+  }
+
+  &__version {
+    font-size: .7em;
+  }
+
+  &__content {
+    align-self: flex-start;
+    font-size: 1.3em;
+  }
+}

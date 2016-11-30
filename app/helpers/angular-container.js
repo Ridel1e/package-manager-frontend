@@ -29,7 +29,9 @@ class AngularContainer extends AngularObject {
     return {};
   }
 
-  mapActionsToThis() {}
+  mapActionsToThis() {
+    return {};
+  }
 }
 
 export default AngularContainer;

@@ -1,0 +1,54 @@
+<aside class="spm-package-additional-info">
+  <div class="spm-package-additional-info__info-group">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-user spm-package-additional-info__icon"></i> Author:
+    </span> 
+    <span class="spm-package-additional-info__package-attr">{{::$ctrl.package.author}}</span>
+  </div>
+  <div class="spm-package-additional-info__info-group">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-git spm-package-additional-info__icon"></i> Git repository:
+    </span> 
+    <span class="spm-package-additional-info__package-attr">{{::$ctrl.package.gitRepository}}</span>
+  </div>
+  <div class="spm-package-additional-info__info-group">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-level-up spm-package-additional-info__icon"></i> Latest version:
+    </span> 
+    <span class="spm-package-additional-info__package-attr">{{::$ctrl.package.version}}</span>
+  </div>
+  <div class="spm-package-additional-info__info-group">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-star spm-package-additional-info__icon"></i> Stars:
+    </span> 
+    <span class="spm-package-additional-info__package-attr">{{::$ctrl.package.stars}}</span>
+  </div>
+  <div class="spm-package-additional-info__info-group">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-download spm-package-additional-info__icon"></i> Downloads:
+    </span> 
+    <span class="spm-package-additional-info__package-attr">{{::$ctrl.package.downloads}}</span>
+  </div>
+  <div class="spm-package-additional-info__info-group 
+              spm-package-additional-info__info-group_vertical">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-tags spm-package-additional-info__icon"></i> Tags:
+    </span>
+    <div class="spm-package-additional-info__package-attrs">
+      <span data-ng-repeat="tag in $ctrl.package.tags">
+        {{::tag}} 
+      </span>
+    </div>
+  </div>
+  <div class="spm-package-additional-info__info-group 
+              spm-package-additional-info__info-group_vertical">
+    <span class="spm-package-additional-info__package-label">
+      <i class="fa fa-users spm-package-additional-info__icon"></i> Collaborators:
+    </span>
+    <div class="spm-package-additional-info__package-attrs">
+      <span data-ng-repeat="tag in $ctrl.package.tags">
+        {{::tag}} 
+      </span>
+    </div>
+  </div>
+</aside>
